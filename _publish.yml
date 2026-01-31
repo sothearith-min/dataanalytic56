@@ -1,0 +1,14 @@
+- source: session12.qmd
+  quarto-pub:
+    - id: 6764b462-d96c-4f08-b2ae-75e2999e232d
+      url: https://min.quarto.pub/session12_da
+- source: session34.qmd
+  quarto-pub:
+    - id: a6112bf3-ea3c-4313-a49c-ba448860a45f
+      url: https://sothearith-min.quarto.pub/session34
+    - id: 8a401576-db56-4f6b-8738-0af497af5e6b
+      url: https://min.quarto.pub/session34
+- source: session56.qmd
+  quarto-pub:
+    - id: session56
+      url: https://min.quarto.pub/session56

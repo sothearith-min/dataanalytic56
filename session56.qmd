@@ -1,0 +1,807 @@
+---
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    transition: fade
+    font-family: 'Trebuchet MS'
+    scrollable: true
+---
+
+<style> 
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  color: #2980b9;
+}
+.reveal {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+</style>
+
+<div style="text-align:center; margin-top: 40px; line-height: 1.4;">
+  
+  <img src="https://pelprek.sgp1.digitaloceanspaces.com/banner/3489/148825024520275.png" alt="PPIU Logo" style="width: 400px; margin-bottom: 20px;">
+  
+  <h1 style="font-size: 3em; font-weight: 700; color: #2980b9; margin-bottom: 10px;">
+    Data Analytics
+  </h1>
+
+  <h2 style="font-size: 1.6em; font-weight: 500; color: #555;">
+    Data Collection & Data Types
+  </h2>
+
+  <div style="border-bottom: 4px solid #e74c3c; width: 45%; margin: 18px auto;"></div>
+<h3 style="margin-top: 25px; font-weight: 700; color: #050E3C">
+  By: MIN Sothearith
+</h3>
+
+<h4 style="font-weight: 700; color: #666;">
+  Phnom Penh International University
+</h4>
+
+</div>
+
+## Quick Recap: Last Week 📚
+
+**What We Covered:**
+
+- Asking the right analytical questions
+- SMART-Q framework for good questions
+- Primary vs secondary data (introduction)
+- Turning vague problems into specific questions
+
+::: {.callout-note}
+## 🎯 Remember
+Good analysis starts with a **good question** and the **right data**!
+:::
+
+## Today's Learning Objectives
+
+**By the end of this session, you will:**
+
+- Distinguish **primary** vs **secondary** data and when to use each
+- Understand **quantitative** vs **qualitative** data and how to use them
+- Explain **levels of measurement**: **nominal**, **ordinal**, **interval**, and **ratio**
+- Recognize common **data formats** (CSV, JSON, XML) and their uses
+- Choose appropriate collection methods and data types for your analysis
+
+::: {.callout-tip}
+**⏱️ Time:** ~90 minutes | **📝 Activity:** Focus on data types and measurement levels!
+:::
+
+## Session Roadmap 🗺️
+
+1. **Part 1:** Primary vs Secondary Data
+2. **Part 2:** Quantitative vs Qualitative Data
+3. **Part 3:** Levels of Measurement (Nominal, Ordinal, Interval, Ratio)
+4. **Part 4:** Data Formats (CSV, JSON, XML, Excel)
+5. **Part 5:** Data Types in Practice
+6. Practice & Takeaways
+
+::: {.callout-note}
+## 📋 We focus on **primary vs secondary**, **quantitative vs qualitative**, and **nominal / ordinal / interval / ratio**!
+:::
+
+## Part 1: Data Collection Methods 📊
+
+::: {style="text-align:center; margin-top: 60px;"}
+### "Garbage in, garbage out" {style="color: #2980b9; font-size: 1.8em;"}
+
+Quality of your analysis depends on quality of your data!
+:::
+
+::: {.callout-important}
+## 💡 Key Insight
+The **method** you use to collect data affects its reliability, cost, and suitability for your question!
+:::
+
+## Primary vs Secondary Data: Overview
+
+| | **Primary Data** | **Secondary Data** |
+|--|------------------|---------------------|
+| **Definition** | Data you collect yourself for your specific purpose | Data collected by others for other purposes |
+| **Source** | Surveys, experiments, interviews, observations | Reports, databases, articles, websites |
+| **Control** | You design and control collection | Pre-existing; you have no control over collection |
+| **Cost** | Usually higher (time, money) | Usually lower (often free) |
+| **Relevance** | Tailored to your question | May need filtering or adaptation |
+
+::: {.callout-note}
+## 📋 Think of it as...
+**Primary** = "I went out and got it." | **Secondary** = "Someone else already got it."
+:::
+
+## Primary Data: Characteristics
+
+**You collect it first-hand for your own analysis.**
+
+**Advantages:**
+
+- ✅ Exactly fits your research question
+- ✅ You know how it was collected (method, timing, sample)
+- ✅ Fresh and current (if you collect recently)
+- ✅ No copyright issues for your use
+
+**Disadvantages:**
+
+- ❌ Time-consuming and often expensive
+- ❌ Requires design (survey, experiment, etc.)
+- ❌ May need ethics approval or consent
+
+::: {.callout-tip}
+## 🎯 Use primary data when...
+You need data that doesn't exist elsewhere or must be tailored (e.g. customer satisfaction for *your* product).
+:::
+
+## Primary Data: Common Methods
+
+::: {.columns}
+::: {.column width="50%"}
+**Surveys & Questionnaires**
+
+- Online forms, phone, paper
+- Quantitative (ratings, counts) or qualitative (open text)
+- Sample size and design matter
+
+**Experiments**
+
+- A/B tests, controlled trials
+- Change one variable, measure effect
+- Strong for causation
+:::
+
+::: {.column width="50%"}
+**Interviews & Focus Groups**
+
+- Deep, qualitative insights
+- Small samples, rich detail
+
+**Observations**
+
+- Watch behavior (e.g. in-store, on website)
+- No direct questions; real behavior
+:::
+:::
+
+## Secondary Data: Characteristics
+
+**Data that already exists; collected by others.**
+
+**Advantages:**
+
+- ✅ Usually faster and cheaper (or free)
+- ✅ Large datasets (e.g. government, research)
+- ✅ Historical or cross-country comparison possible
+- ✅ Good for exploratory or background analysis
+
+**Disadvantages:**
+
+- ❌ May not match your exact question
+- ❌ You don't control quality or method
+- ❌ Can be outdated or biased
+- ❌ Check terms of use and citation requirements
+
+::: {.callout-warning}
+## ⚠️ Always evaluate
+Who collected it? When? For what purpose? Is it still valid?
+:::
+
+## Secondary Data: Common Sources
+
+::: {.columns}
+::: {.column width="50%"}
+**Public & Government**
+
+- National statistics offices
+- Open data portals (e.g. data.gov)
+- UN, World Bank, WHO
+
+**Academic & Research**
+
+- Journals, datasets from papers
+- Repositories (e.g. ICPSR, Figshare)
+:::
+
+::: {.column width="50%"}
+**Business & Media**
+
+- Industry reports, market research
+- News archives, company filings
+- Social media (with API/terms)
+
+**Web**
+
+- Websites, tables, APIs, open data portals
+:::
+:::
+
+## When to Use Primary vs Secondary?
+
+| Situation | Prefer |
+|-----------|--------|
+| Quick answer; data already exists | **Secondary** |
+| Need very specific metric (e.g. your app's NPS) | **Primary** |
+| Budget/time limited | **Secondary** (then refine with primary if needed) |
+| Testing cause–effect (e.g. new feature) | **Primary** (experiment) |
+| Historical or cross-country comparison | **Secondary** |
+| No existing source for your question | **Primary** |
+
+::: {.callout-important}
+## 🎯 Best practice
+Often **combine**: use secondary data for context, primary for what's missing!
+:::
+
+## Part 2: Quantitative vs Qualitative Data 📊
+
+**Two fundamental ways to classify the *nature* of data:**
+
+::: {.columns}
+::: {.column width="50%"}
+### Quantitative
+**Numbers that can be measured or counted**
+
+- Discrete (counts: 1, 2, 3) or continuous (height, temperature)
+- You can do **math**: mean, sum, regression
+- Examples: age, sales, temperature, score
+:::
+
+::: {.column width="50%"}
+### Qualitative
+**Non-numeric: categories, labels, or text**
+
+- Describes **qualities** or **categories**
+- You **count** or **group**; not true "average"
+- Examples: gender, country, feedback text, color
+:::
+:::
+
+::: {.callout-important}
+## 💡 Key distinction
+**Quantitative** = "how much" or "how many" | **Qualitative** = "what kind" or "which category"
+:::
+
+## Quantitative Data in Detail
+
+**Definition:** Data that represent **amounts** or **counts**; can be analyzed with arithmetic.
+
+**Types:**
+
+- **Discrete:** Whole numbers (number of customers, count of clicks, number of products)
+- **Continuous:** Can take any value in a range (weight, height, temperature, time)
+
+**Typical analysis:** Mean, median, standard deviation, histograms, scatter plots, regression.
+
+::: {.callout-tip}
+## 🎯 Rule of thumb
+If you can **add** or **average** the values meaningfully, it's quantitative!
+:::
+
+## Qualitative Data in Detail
+
+**Definition:** Data that describe **categories**, **labels**, or **qualities**; not meaningful to add or average.
+
+**Types:**
+
+- **Categorical (nominal/ordinal):** Fixed set of labels (gender, country, size: S/M/L)
+- **Text (free form):** Open-ended responses, comments, descriptions
+
+**Typical analysis:** Frequency counts, mode, bar charts, grouping, thematic coding (for text).
+
+::: {.callout-note}
+## 📋 "Male" + "Female" has no numeric meaning; you count how many in each category!
+:::
+
+## Primary/Secondary vs Quantitative/Qualitative
+
+**These are different dimensions:**
+
+| | **Primary** | **Secondary** |
+|--|-------------|----------------|
+| **Quantitative** | Your survey scores, your experiment results | Census numbers, published statistics |
+| **Qualitative** | Your interview transcripts, open survey responses | Existing reports, case studies, articles |
+
+::: {.callout-important}
+## 🎯 Primary/secondary = *who collected it*. Quantitative/qualitative = *what kind of values* it has.
+:::
+
+## Part 3: Levels of Measurement 📐
+
+**Level of measurement** = How much **structure** and **meaning** the values have (affects which statistics and charts are valid).
+
+**Four levels (from least to most structure):**
+
+1. **Nominal** – categories, no order  
+2. **Ordinal** – categories with order  
+3. **Interval** – numeric, equal gaps, no true zero  
+4. **Ratio** – numeric, equal gaps, true zero  
+
+::: {.callout-note}
+## 📋 Choosing the right level tells you: can I average? can I say "twice as much"? can I only count?
+:::
+
+## Level 1: Nominal 📌
+
+**Nominal** = Categories with **no order**; names or labels only.
+
+**Examples:** Gender (Male, Female, Other), Country (Cambodia, Thailand, Vietnam), Color (Red, Blue), Product type.
+
+**What you can do:** Count, mode, frequency, group by, bar chart.  
+**What you cannot do:** Order meaningfully, average, or say "one is greater than another" in a numeric sense.
+
+::: {.callout-important}
+## 🎯 Nominal = "named" categories. Order does not matter!
+:::
+
+## Level 2: Ordinal 📊
+
+**Ordinal** = Categories with **meaningful order**, but **gaps between levels are not equal**.
+
+**Examples:** Size (S, M, L), Satisfaction (Very dissatisfied … Very satisfied), Education level (Primary, Secondary, University), Ranking (1st, 2nd, 3rd).
+
+**What you can do:** Count, mode, order, median (with care), "greater than / less than".  
+**What you cannot do:** Say "the difference between S and M equals the difference between M and L" (unless you define a scale).
+
+::: {.callout-tip}
+## 🎯 Ordinal = order matters, but **intervals** between levels are not necessarily equal!
+:::
+
+## Level 3: Interval 📏
+
+**Interval** = **Numeric** scale with **equal intervals** between values, but **no true zero** (zero does not mean "none").
+
+**Examples:** Temperature in °C or °F (0° is not "no temperature"), calendar year, IQ score (0 is not "no intelligence").
+
+**What you can do:** Add, subtract, mean, standard deviation, line charts.  
+**What you cannot do:** Say "twice as hot" or "twice the IQ" (ratio is meaningless because zero is arbitrary).
+
+::: {.callout-important}
+## 🎯 Interval = equal gaps; **no meaningful ratio** because zero is not a true zero!
+:::
+
+## Level 4: Ratio 📈
+
+**Ratio** = **Numeric** scale with **equal intervals** and a **true zero** (zero = absence of the thing).
+
+**Examples:** Height, weight, age, sales revenue, count of customers, distance.
+
+**What you can do:** Everything for interval **plus** ratios ("twice as heavy", "half the revenue"), geometric mean.
+
+::: {.callout-tip}
+## 🎯 Ratio = the strongest level; you can meaningfully say "A is twice B"!
+:::
+
+## Nominal vs Ordinal vs Interval vs Ratio – Summary
+
+| Level | Order? | Equal gaps? | True zero? | Example | Typical stats |
+|-------|--------|-------------|------------|---------|----------------|
+| **Nominal** | No | — | — | Country, gender | Count, mode |
+| **Ordinal** | Yes | No | — | Size S/M/L, satisfaction | Median, mode |
+| **Interval** | Yes | Yes | No | Temperature (°C), year | Mean, SD |
+| **Ratio** | Yes | Yes | Yes | Height, revenue, age | Mean, SD, ratios |
+
+::: {.callout-note}
+## 📋 In practice: nominal/ordinal often **qualitative**; interval/ratio are **quantitative**!
+:::
+
+## Why Levels of Measurement Matter
+
+**Wrong statistic for the level → misleading or invalid:**
+
+- **Nominal:** Don't take the "mean" of country or gender.
+- **Ordinal:** Mean of "1=Low, 2=Medium, 3=High" is sometimes used but interpret with care (assumes equal spacing).
+- **Interval:** Ratios ("twice as hot") are not meaningful.
+- **Ratio:** Full range of statistics and ratios are valid.
+
+::: {.callout-warning}
+## ⚠️ Always ask: what is the **level** of this variable? Then choose charts and statistics accordingly!
+:::
+
+## Part 4: Data Formats 📁
+
+**Data format** = How data is **stored and structured** (file type and rules).
+
+Choosing the right format affects:
+
+- Ease of use in tools (Excel, Python, R, databases)
+- Size (compression, readability)
+- Structure (flat vs nested, schema)
+- Sharing and APIs
+
+::: {.callout-tip}
+## 💡 Common formats
+CSV, JSON, XML, Excel (.xlsx), and databases (e.g. SQL) are the ones you'll see most!
+:::
+
+## CSV (Comma-Separated Values)
+
+**What it is:** Plain text; each line = one row; columns separated by commas (or semicolons).
+
+**Example:**
+
+```text
+name,age,city
+Alice,25,Phnom Penh
+Bob,30,Siem Reap
+```
+
+**Pros:** Simple, works everywhere (Excel, Python, R, Google Sheets), small, human-readable  
+**Cons:** No nested structure, one "sheet" per file, comma in text needs escaping
+
+::: {.callout-note}
+## 📋 Best for
+Tables, spreadsheets, flat lists. Default choice for many analyses!
+:::
+
+## JSON (JavaScript Object Notation)
+
+**What it is:** Text-based; uses `{ }` and `[ ]` for objects and arrays. Very common in APIs and web apps.
+
+**Example:**
+
+```json
+{
+  "name": "Alice",
+  "age": 25,
+  "city": "Phnom Penh",
+  "courses": ["Math", "Stats"]
+}
+```
+
+**Pros:** Nested structure, widely supported (APIs, Python, R, JavaScript), readable  
+**Cons:** Verbose for very large flat tables; less convenient than CSV in Excel
+
+::: {.callout-tip}
+## 🎯 Best for
+API responses, configs, nested or hierarchical data!
+:::
+
+## XML (eXtensible Markup Language)
+
+**What it is:** Tag-based markup; elements and attributes define structure.
+
+**Example:**
+
+```xml
+<person>
+  <name>Alice</name>
+  <age>25</age>
+  <city>Phnom Penh</city>
+</person>
+```
+
+**Pros:** Structured, schema (XSD), used in legacy systems and some reports  
+**Cons:** Verbose, heavier than JSON for similar content; parsing a bit more work
+
+::: {.callout-note}
+## 📋 Best for
+Legacy systems, documents with strict schema, some government/data feeds!
+:::
+
+## Excel (.xlsx) and Spreadsheets
+
+**What it is:** Binary (or OOXML) format; multiple sheets, formulas, formatting.
+
+**Pros:** Familiar in business, multiple sheets, charts, formulas  
+**Cons:** Not ideal for automation or very large data; programmatic handling needs libraries (e.g. `openpyxl`, `pandas`)
+
+::: {.callout-tip}
+## 🎯 Best for
+Reports, dashboards, manual editing. For analysis pipelines, CSV or JSON often better!
+:::
+
+## Other Formats (Brief)
+
+| Format | Typical use |
+|--------|-------------|
+| **TSV** | Like CSV but tab-separated; good when commas appear in text |
+| **YAML** | Configs, readable; less common as main data store |
+| **Parquet / Feather** | Columnar; fast for big data (e.g. pandas, Spark) |
+| **SQL / Databases** | Relational data; query with SQL; best for large, multi-table data |
+
+::: {.callout-note}
+## 📋 Rule of thumb
+**Share & analyze tables** → CSV or JSON. **APIs** → JSON. **Enterprise/big data** → Parquet, DB.
+:::
+
+## Choosing a Data Format
+
+| Need | Good choice |
+|------|-------------|
+| Simple table, Excel users | CSV |
+| API or nested structure | JSON |
+| Multiple sheets, formulas | Excel (.xlsx) |
+| Legacy / formal schema | XML |
+| Large analytics, pipelines | Parquet, database |
+| Config / readability | YAML (for config), JSON (for data) |
+
+::: {.callout-important}
+## 🎯 Match format to your tool and audience!
+:::
+
+## Part 5: Data Types in Practice 📐
+
+**Data type** = The **kind** of value a variable or column holds; links to **quantitative/qualitative** and **levels of measurement**.
+
+::: {.callout-important}
+## 💡 Why data types matter
+- **Analysis:** Nominal data → count, mode; interval/ratio → mean, SD. Wrong type → wrong result!
+- **Storage:** Numbers and dates stored correctly enable correct operations
+- **Visualization:** Nominal/ordinal → bar charts; interval/ratio → histograms, line charts
+:::
+
+## Data Types: Overview (Link to Levels)
+
+| Type | Level of measurement | Examples | Typical operations |
+|------|----------------------|----------|---------------------|
+| **Numeric** (int, float) | Interval / Ratio | 42, 3.14, age, revenue | Mean, median, sum, histograms |
+| **Categorical** (nominal) | Nominal | "Male", "Cambodia" | Count, mode, bar chart |
+| **Categorical** (ordinal) | Ordinal | "S", "M", "L"; satisfaction 1–5 | Count, median, ordered bar chart |
+| **Datetime** | Often interval | 2024-01-15, 14:30 | Sort, diff, time series |
+| **Text** (string) | Qualitative | Comments, descriptions | Count, thematic coding |
+| **Boolean** | Often nominal | True, False | Count, filter |
+
+::: {.callout-note}
+## 📋 Nominal/ordinal → qualitative. Interval/ratio → quantitative. Set types correctly in pandas/R!
+:::
+
+## Data Type: Numeric (Integer & Float)
+
+**Integer (int):** Whole numbers – counts, IDs, ages in years.
+
+- Examples: `1`, `0`, `-5`, `1000`
+- Operations: sum, mean, median, min, max, histograms
+
+**Float (float):** Numbers with decimals – prices, rates, measurements.
+
+- Examples: `3.14`, `0.5`, `-2.7`, `99.99`
+- Same operations as int; also rounding, precision
+
+::: {.callout-warning}
+## ⚠️ Don't store numbers as text! "123" + "456" = "123456", not 579. Convert to int/float for math.
+:::
+
+## Data Type: Categorical (Nominal vs Ordinal)
+
+**Categorical** = A fixed set of labels; maps to **nominal** or **ordinal** level of measurement.
+
+**Nominal** – no order: gender, country, product name.
+
+- Examples: "Male", "Female"; "Cambodia", "Thailand"
+- Operations: count, mode, group by, bar chart
+
+**Ordinal** – meaningful order: size, rating, education level.
+
+- Examples: "Small", "Medium", "Large"; "Low", "Medium", "High"
+- Operations: count, mode, median (with care), ordered bar chart
+
+::: {.callout-tip}
+## 🎯 In pandas: use `category` dtype; for ordinal you can set order with `pd.Categorical(..., ordered=True)`
+:::
+
+## Data Type: Datetime
+
+**Datetime** = Date and/or time.
+
+- Examples: `2024-01-15`, `2024-01-15 14:30:00`, "January 15, 2024"
+- Operations: sort, filter by range, difference (e.g. days between), aggregate by month/year
+
+**Why type matters:** If stored as text, "2024-01-10" might sort after "2024-01-9" (string sort). As datetime, order is correct.
+
+::: {.callout-note}
+## 📋 In Python: `pd.to_datetime()`; in R: `as.Date()`, `lubridate`. Always check timezone if relevant!
+:::
+
+## Data Type: Text (String)
+
+**Text (string)** = Sequence of characters – names, descriptions, comments.
+
+- Examples: "Alice", "Phnom Penh", long paragraphs
+- Operations: length, search, replace, split, sentiment (with NLP)
+- Often **not** used in numeric models directly; you may extract features (e.g. word count, sentiment score) or encode (e.g. TF-IDF)
+
+::: {.callout-tip}
+## 🎯 For analysis: decide if a column is really "text" or should be **categorical** (limited unique values) or **numeric** (if it's a number stored as text)
+:::
+
+## Data Type: Boolean
+
+**Boolean** = True or False (or 1/0, Yes/No).
+
+- Examples: `True`, `False`; "Yes", "No"; 1, 0
+- Operations: filter (e.g. keep only True), count, sum (count of True), logic (AND, OR)
+
+::: {.callout-note}
+## 📋 Useful for flags: "is_active", "purchased", "opted_in". Convert "Yes"/"No" to True/False for clarity in code
+:::
+
+## Data Type vs Data Format
+
+| Concept | Meaning | Example |
+|--------|---------|---------|
+| **Data format** | How data is **stored** (file structure) | CSV, JSON, Excel |
+| **Data type** | **Kind** of each value (semantics) | int, float, category, datetime, string |
+
+**Same format, different types:** A CSV can have columns that are numbers, dates, and text. The **format** is CSV; each **column** has a **type**.
+
+::: {.callout-important}
+## 🎯 When loading data, you often must **set or convert** types (e.g. "date" column → datetime; "id" → int)
+:::
+
+## Type Conversion (Coercion)
+
+**Converting one type to another:**
+
+- **String → Number:** `int("42")`, `float("3.14")` (Python); `as.numeric()` (R)
+- **Number → String:** `str(42)` (Python); `as.character()` (R)
+- **String → Datetime:** `pd.to_datetime(df["date"])` (pandas); `as.Date()`, `lubridate` (R)
+- **Categorical:** `df["size"] = df["size"].astype("category")` (pandas); `factor()` (R)
+
+::: {.callout-warning}
+## ⚠️ Invalid values (e.g. "abc" to int) cause errors. Clean or handle missing/invalid data first!
+:::
+
+## Why Data Types Matter for Analysis
+
+**Wrong type → wrong result:**
+
+- **Averaging "1","2","3" as text** → error or nonsense (e.g. concatenation)
+- **Sorting dates as text** → "2024-01-9" after "2024-01-10"
+- **Using "Male"/"Female" as numbers** → meaningless mean
+
+**Right type → correct analysis:**
+
+- Numeric → mean, median, regression, histograms
+- Categorical → counts, bar charts, group by
+- Datetime → time series, trends, period comparisons
+
+::: {.callout-tip}
+## 🎯 Always inspect `dtypes` (pandas) or `str()` (R) after loading data!
+:::
+
+## Data Types: Summary Table
+
+| Type | Python (pandas) | R | Use for |
+|------|------------------|---|--------|
+| Integer | `int64` | integer | Counts, IDs |
+| Float | `float64` | numeric | Prices, rates |
+| Categorical | `category` | factor | Groups, labels |
+| Datetime | `datetime64` | Date/POSIXct | Dates, times |
+| Text | `object`/string | character | Names, free text |
+| Boolean | `bool` | logical | Flags |
+
+::: {.callout-note}
+## 📋 Setting types explicitly when reading (e.g. `dtype=` in pandas) avoids surprises later!
+:::
+
+## Converting Between Formats (Recap)
+
+**In practice:**
+
+- **Python:** `pandas` reads CSV, JSON, Excel, etc.; write back to any of them
+- **R:** `readr`, `jsonlite`, `readxl` for read; `write_csv`, etc. for write
+- **Excel:** Save As → CSV; or use Power Query / scripts for JSON
+
+::: {.callout-tip}
+## 💡 Typical workflow
+Load data (CSV/JSON/API) → **set correct types** (nominal, ordinal, interval, ratio) → analyze and visualize!
+:::
+
+## Practice Exercise 1 🏋️
+
+**Primary vs Secondary**
+
+For each scenario, say whether you'd start with **primary** or **secondary** data (and why in one sentence):
+
+1. "What is the average satisfaction score of *our* app users?"
+2. "How did GDP per capita change in ASEAN countries over the last 10 years?"
+3. "Does our new checkout button increase conversions?"
+
+::: {.callout-caution}
+## ✏️ Your Turn
+Take 3 minutes. Discuss with a partner!
+:::
+
+## Sample Answer: Exercise 1
+
+1. **Our app satisfaction** → **Primary** (only we can survey our users; no one else has this for our product).
+2. **GDP in ASEAN** → **Secondary** (national/international statistics already exist, e.g. World Bank).
+3. **New checkout button** → **Primary** (we run an A/B experiment on our site and collect conversion data).
+
+::: {.callout-note}
+## 💡 Notice
+Question 2 could use secondary + primary if we later survey *why* people think GDP changed!
+:::
+
+## Practice Exercise 2 🏋️
+
+**Data formats**
+
+You receive:
+
+- A) A table of 5,000 customers: id, name, email, signup_date  
+- B) API response with nested objects: user → profile → preferences  
+- C) A report with 3 sheets: Summary, Sales by Region, Product List  
+
+Suggest one main format for **storing or sharing** each (CSV, JSON, Excel, or other). Why?
+
+::: {.callout-caution}
+## ✏️ Your Turn (2 minutes)
+:::
+
+## Sample Answer: Exercise 2
+
+- **A) Customer table** → **CSV** (flat, tabular, easy in Excel and pandas).
+- **B) API nested response** → **JSON** (keeps structure; APIs usually give JSON).
+- **C) Multi-sheet report** → **Excel** (multiple sheets, summary + tables; good for human readers). If only for code, could export each sheet as CSV.
+
+::: {.callout-tip}
+## 💡 No single "best" format
+It depends on who uses it and which tools they use!
+:::
+
+## Practice Exercise 3 🏋️
+
+**Quantitative vs Qualitative & Levels of Measurement**
+
+For each variable, say: (1) **Quantitative or Qualitative**, (2) **Level** (Nominal, Ordinal, Interval, Ratio), (3) **One valid statistic or chart**.
+
+| Variable | Example values |
+|----------|----------------|
+| gender | Male, Female, Other |
+| satisfaction | 1 = Very dissatisfied … 5 = Very satisfied |
+| temperature (°C) | 20, 25, 30 |
+| revenue ($) | 100, 500, 1000 |
+
+::: {.callout-caution}
+## ✏️ Your Turn (3 minutes)
+:::
+
+## Sample Answer: Exercise 3
+
+| Variable | Quant/Qual | Level | Statistic or chart |
+|----------|------------|-------|--------------------|
+| gender | Qualitative | Nominal | Count, mode, bar chart |
+| satisfaction | Qualitative (or treated as quantitative) | Ordinal | Median, mode, ordered bar chart |
+| temperature (°C) | Quantitative | Interval | Mean, SD, line chart (no "twice as hot") |
+| revenue ($) | Quantitative | Ratio | Mean, sum, "twice as much", histogram |
+
+::: {.callout-note}
+## 💡 Temperature has no true zero (0°C ≠ no heat); revenue has true zero → ratio!
+:::
+
+## Key Takeaways 🎯
+
+**Primary vs Secondary**
+
+- **Primary** = you collect for your purpose (surveys, experiments, etc.).
+- **Secondary** = already collected by others (reports, databases, web).
+- Often **combine** both.
+
+**Quantitative vs Qualitative**
+
+- **Quantitative** = numbers you can measure/count; mean, sum, regression.
+- **Qualitative** = categories or text; count, mode, group by.
+
+**Levels of measurement**
+
+- **Nominal** = categories, no order (e.g. country, gender).
+- **Ordinal** = order, gaps not equal (e.g. S/M/L, satisfaction).
+- **Interval** = numeric, equal gaps, no true zero (e.g. temperature °C).
+- **Ratio** = numeric, true zero (e.g. height, revenue, age).
+
+**Data formats & types**
+
+- **CSV/JSON/Excel** for storage; set **correct types** (nominal, ordinal, interval, ratio) so analysis and charts are valid!
+
+::: {.callout-important}
+## 💪 Next step
+Practice: load a CSV, identify primary/secondary, quantitative/qualitative, and nominal/ordinal/interval/ratio for each column!
+:::
+
+## Thanks 🤗
+
+<div style="text-align:center; margin-top: 40px;">
+  <p style="font-size: 1.2em; color: #2980b9;">Questions?</p>
+  <p style="color: #666;">Primary vs Secondary • Quantitative vs Qualitative • Nominal • Ordinal • Interval • Ratio</p>
+</div>
